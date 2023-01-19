@@ -29,17 +29,49 @@ body{
     flex-direction: column;
     padding: 5%;
     width: 85%;
+    padding-left: -5%;
 }
 
-.login input{
+ input{
     margin-top: 3%;
+    margin: 5%;
     background-color: #3c3c3c;
     border: none;
-    min-height: 80%;
+    width: 100%;
+    min-height: 30%;
     outline: none;
     color: rgb(255, 255, 255,0.5);
     padding-left: 0.5em;
     
+    
+}
+
+.input-pass{
+    min-height: 60%;
+
+}
+.align-messeger-error-email1{
+    display: flex;
+    margin-top: -4%;
+    padding-left: 1.2em;  
+}
+
+.align-messeger-error-email2{
+    display: flex;
+    padding-left: 1.2em;
+}
+.align-messeger-error-pass{
+    display: flex;
+    padding-left: 1.2em;
+    margin-top: -3%;
+}
+
+.error{
+    color: #ffff;
+    background-color: red;
+    display: none;
+  
+   
 }
 
 input::placeholder{
@@ -52,15 +84,15 @@ input::placeholder{
     align-items: center;
     width: 45%;
     height: auto;
-    margin-top: 10%;
+    margin-top: 5%;
     margin-bottom: -12%;
     margin-left: 20%;
 }
-button{
+.botao{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 25%;
+    margin-top: 20%;
     width: 100%;
     padding: 4%;
     background-color: #3c3c3c;
@@ -73,23 +105,28 @@ button{
     
     
 }
+.botao-none{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    background-color: transparent;
+    border: none;
+    color:rgb(255, 255, 255,0.7) ;
+    cursor: pointer;
+   font-size: 100%;
+   
+}
 
-.botao{
+button{
     display: flex;
     align-items: center;
     justify-content: center;
     
 }
 
-.botao a{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 5%;
-    color: rgb(255, 255, 255,0.9);
-    
-    text-decoration: none;
-    
+button[disabled] {
+    opacity: 0.7;
 }
 
 .cadastro-sem-link{

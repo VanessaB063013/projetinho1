@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Controle de Gastos</title>
     <link rel="stylesheet" href="index.css">
+
+    <script type="text/javascript" src="index.js"> </script>
 </head>
 
 <body>
@@ -18,16 +20,23 @@
 
             <form>
 
-
-                <input type="email" name="e-mail" placeholder="seu@email.com" autofocus>
-
-                <input type="password" name="senha" placeholder="sua senha">
-
+                
+                    <input type="email" name="email" placeholder="seu@email.com" autofocus id="email"
+                        onchange="validateFields();">
+                        <div class="error align-messeger-error-email1" id="email-required-error">E-mail é obrigatório.</div>
+                        <div class="error align-messeger-error-email2" id="email-invalid-error">Digite um e-mail válido.</div>
+                
+                <div>
+                    <input class="input-pass" type="password" name="senha" placeholder="sua senha" id="senha" onchange="validateFields();">
+                    <div class="error align-messeger-error-pass" id="senha-required-error">Senha é obrigatória.</div>
+                </div>
             </form>
-            <div class="botao">
-                <p><button type="button">Entrar</button> <a href="redefinicao.html">Esqueceu a senha ?</a> </p>
+            <div>
+                <p><button type="button" disabled="true" class="botao" id="login-button">Entrar</button> <button
+                        class="botao-none" disabled="true" id="recover-password-button">Esqueceu a senha ?</button> </p>
             </div>
-            <p class="cadastro-sem-link">Ainda não possui cadastro?  <a href="cadastro.html" class="cadastro-com-link">Criar conta</a></p>
+            <p class="cadastro-sem-link">Ainda não possui cadastro? <a href="cadastro.html"
+                    class="cadastro-com-link">Criar conta</a></p>
 
         </div>
 
